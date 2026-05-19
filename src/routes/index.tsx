@@ -10,29 +10,6 @@ const GITHUB = "https://github.com/Rinkal-Khatrani";
 const EMAIL = "rinkalkhatrani123@gmail.com";
 const PHONE = "+91 72848 48463";
 
-const projects = [
-  {
-    title: "Frontera Care Platform",
-    year: "2023 — 2026",
-    description:
-      "HIPAA-compliant healthcare platform. Built a centralized library of 30+ reusable React + TypeScript components adopted across a 15+ engineer team, cutting feature delivery time by ~30%.",
-    stack: ["React", "TypeScript", "GraphQL", "Tailwind"],
-  },
-  {
-    title: "CogniAble Therapy App",
-    year: "2021 — 2023",
-    description:
-      "AI-driven behavioral therapy app across iOS & Android. Modernized legacy components, integrated REST/GraphQL APIs for real-time sync and analytics, rolled out Jest-based testing.",
-    stack: ["React Native", "GraphQL", "Jest", "Tailwind"],
-  },
-  {
-    title: "Component System & Perf",
-    year: "Ongoing",
-    description:
-      "Reduced initial load ~40% via code-splitting, lazy loading and deferred fetching. Automated onboarding, scheduling and reporting flows with Cypress, cutting regression bugs ~50%.",
-    stack: ["Cypress", "RTL", "CodeGen", "WCAG"],
-  },
-];
 
 const experience = [
   {
@@ -108,7 +85,7 @@ function Index() {
       <div className="w-full max-w-3xl px-5 sm:px-6 py-12 sm:py-16 space-y-20 sm:space-y-28">
         <Hero />
         <About />
-        <Projects />
+        
         <Experience />
         <Education />
         <SkillsSection />
@@ -127,7 +104,7 @@ function Nav() {
           Rinkal Satani<span className="text-accent">.</span>
         </a>
         <nav className="hidden sm:flex items-center gap-6 text-sm text-muted-ink font-medium">
-          <a href="#work" className="hover:text-foreground transition-colors">Work</a>
+          
           <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
           <a href="#education" className="hover:text-foreground transition-colors">Education</a>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
@@ -209,43 +186,6 @@ function About() {
   );
 }
 
-function Projects() {
-  return (
-    <section id="work" className="space-y-8 sm:space-y-10">
-      <SectionHeader eyebrow="Selected Projects" title="Things I've built." />
-      <div className="space-y-5">
-        {projects.map((p) => (
-          <article
-            key={p.title}
-            className="group p-6 sm:p-7 rounded-2xl bg-surface border border-border shadow-card hover:shadow-card-hover hover:border-accent transition-all duration-300"
-          >
-            <div className="flex justify-between items-start gap-4 mb-3">
-              <h3 className="text-xl sm:text-2xl font-semibold text-foreground group-hover:text-accent transition-colors font-display">
-                {p.title}
-              </h3>
-              <span className="shrink-0 text-[11px] text-muted-ink px-2.5 py-1 rounded-full bg-secondary border border-border font-display font-semibold">
-                {p.year}
-              </span>
-            </div>
-            <p className="text-muted-ink mb-5 text-sm sm:text-base leading-relaxed">
-              {p.description}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {p.stack.map((s) => (
-                <span
-                  key={s}
-                  className="text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 border border-border rounded-md text-muted-foreground bg-background"
-                >
-                  {s}
-                </span>
-              ))}
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 function Experience() {
   return (
