@@ -272,7 +272,7 @@ function Contact() {
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) return;
     const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`);
     const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`);
-    window.location.href = `mailto:rinkalkhatrani3366@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:rinkalkhatrani123@gmail.com?subject=${subject}&body=${body}`;
     setStatus("sent");
   };
 
@@ -287,8 +287,8 @@ function Contact() {
             <span className="italic">something good.</span>
           </h2>
           <div className="mt-10 space-y-3 font-mono text-sm">
-            <a href="mailto:rinkalkhatrani3366@gmail.com" className="block hover:text-accent transition-colors">
-              rinkalkhatrani3366@gmail.com
+            <a href="mailto:rinkalkhatrani123@gmail.com" className="block hover:text-accent transition-colors">
+              rinkalkhatrani123@gmail.com
             </a>
             <a href="tel:+917284848463" className="block hover:text-accent transition-colors">
               +91 72848 48463
