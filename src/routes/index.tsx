@@ -268,7 +268,14 @@ function Experience() {
               </span>
             </div>
             <p className="text-sm text-accent mb-2 font-display font-semibold">{e.company}</p>
-            <p className="text-sm text-muted-ink leading-relaxed">{e.description}</p>
+            <ul className="mt-3 space-y-2">
+              {e.points.map((pt) => (
+                <li key={pt} className="flex gap-2.5 text-sm text-muted-ink leading-relaxed">
+                  <span className="text-accent mt-1.5 shrink-0">▸</span>
+                  <span>{pt}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
