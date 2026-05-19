@@ -186,43 +186,6 @@ function About() {
   );
 }
 
-function Projects() {
-  return (
-    <section id="work" className="space-y-8 sm:space-y-10">
-      <SectionHeader eyebrow="Selected Projects" title="Things I've built." />
-      <div className="space-y-5">
-        {projects.map((p) => (
-          <article
-            key={p.title}
-            className="group p-6 sm:p-7 rounded-2xl bg-surface border border-border shadow-card hover:shadow-card-hover hover:border-accent transition-all duration-300"
-          >
-            <div className="flex justify-between items-start gap-4 mb-3">
-              <h3 className="text-xl sm:text-2xl font-semibold text-foreground group-hover:text-accent transition-colors font-display">
-                {p.title}
-              </h3>
-              <span className="shrink-0 text-[11px] text-muted-ink px-2.5 py-1 rounded-full bg-secondary border border-border font-display font-semibold">
-                {p.year}
-              </span>
-            </div>
-            <p className="text-muted-ink mb-5 text-sm sm:text-base leading-relaxed">
-              {p.description}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {p.stack.map((s) => (
-                <span
-                  key={s}
-                  className="text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 border border-border rounded-md text-muted-foreground bg-background"
-                >
-                  {s}
-                </span>
-              ))}
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 function Experience() {
   return (
