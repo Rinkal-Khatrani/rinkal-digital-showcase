@@ -85,7 +85,7 @@ function Index() {
       <div className="w-full max-w-3xl px-5 sm:px-6 py-12 sm:py-16 space-y-20 sm:space-y-28">
         <Hero />
         <About />
-        <Projects />
+        
         <Experience />
         <Education />
         <SkillsSection />
