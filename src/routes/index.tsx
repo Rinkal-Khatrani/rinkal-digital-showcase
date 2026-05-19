@@ -8,154 +8,93 @@ export const Route = createFileRoute("/")({
 const projects = [
   {
     title: "Frontera Care Platform",
-    role: "Front-end Developer",
     year: "2023 — 2026",
     description:
       "A HIPAA-compliant healthcare platform. Built a centralized library of 30+ reusable React + TypeScript components adopted across a 15+ engineer team, cutting feature delivery time by ~30%.",
-    stack: ["React", "TypeScript", "GraphQL", "Tailwind", "Django"],
+    stack: ["React", "TypeScript", "GraphQL", "Tailwind"],
   },
   {
     title: "CogniAble Therapy App",
-    role: "Front-end Developer",
     year: "2021 — 2023",
     description:
-      "AI-driven behavioral therapy platform across iOS & Android. Modernized legacy components, integrated REST/GraphQL APIs for real-time data sync and analytics, and rolled out Jest-based testing.",
-    stack: ["React Native", "GraphQL", "Tailwind", "Jest"],
+      "AI-driven behavioral therapy app across iOS & Android. Modernized legacy components, integrated REST/GraphQL APIs for real-time sync and analytics, rolled out Jest-based testing.",
+    stack: ["React Native", "GraphQL", "Jest", "Tailwind"],
   },
   {
-    title: "Component System & Performance",
-    role: "Initiative Lead",
+    title: "Component System & Perf",
     year: "Ongoing",
     description:
-      "Reduced initial load by ~40% via code-splitting, lazy loading and deferred fetching. Automated onboarding, scheduling and reporting flows with Cypress, lowering regression bugs ~50%.",
+      "Reduced initial load ~40% via code-splitting, lazy loading and deferred fetching. Automated onboarding, scheduling and reporting flows with Cypress, cutting regression bugs ~50%.",
     stack: ["Cypress", "RTL", "CodeGen", "WCAG"],
   },
 ];
 
 const experience = [
   {
-    company: "Frontera",
-    location: "Denver, USA · Remote",
     role: "Front-end Developer",
+    company: "Frontera, Denver USA",
     period: "Nov 2023 — Apr 2026",
-    points: [
-      "Built 30+ reusable React + TypeScript components used by a 15+ engineer team.",
-      "Optimized GraphQL with CodeGen, query tuning and pagination.",
-      "85%+ test coverage with Jest and React Testing Library.",
-      "Supported Django & Temporal back-end workflows in a HIPAA-compliant setup.",
-    ],
+    description:
+      "Built 30+ reusable React + TypeScript components for a 15-engineer team. Optimized GraphQL with CodeGen and pagination. Supported Django & Temporal back-end workflows in a HIPAA-compliant setup.",
+    active: true,
   },
   {
-    company: "CogniAble",
-    location: "Gurgaon · Remote",
     role: "Front-end Developer",
+    company: "CogniAble, Gurgaon",
     period: "May 2021 — Oct 2023",
-    points: [
-      "Shipped cross-platform iOS & Android apps with React Native.",
-      "Built responsive, WCAG-compliant UI from Figma using Tailwind CSS.",
-      "Integrated REST/GraphQL and third-party APIs for real-time sync.",
-      "Introduced Jest-based unit testing and analytics tracking.",
-    ],
+    description:
+      "Shipped cross-platform iOS & Android apps with React Native. Built responsive, WCAG-compliant UI from Figma. Introduced Jest unit testing and analytics tracking.",
+    active: false,
   },
   {
-    company: "Web Design Internship",
-    location: "On-site",
     role: "Web Design Intern",
+    company: "On-site",
     period: "Nov 2020 — Feb 2021",
-    points: [
-      "Built responsive, user-friendly interfaces with HTML, CSS, JS, jQuery.",
-      "Developed adaptive layouts following modern front-end best practices.",
-    ],
+    description:
+      "Built responsive user-friendly interfaces with HTML, CSS, JS and jQuery. Developed adaptive layouts following modern front-end best practices.",
+    active: false,
   },
-];
-
-const skills = [
-  "React.js", "TypeScript", "GraphQL", "React Native", "Redux",
-  "Tailwind CSS", "Material UI", "Jest", "React Testing Library",
-  "Cypress", "Django", "Temporal", "Node / Express", "MongoDB", "MySQL",
 ];
 
 function Index() {
   return (
-    <main className="min-h-screen grain">
-      <Nav />
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <SkillsSection />
-      <Contact />
-      <Footer />
-    </main>
-  );
-}
-
-function Nav() {
-  return (
-    <header className="sticky top-0 z-40 backdrop-blur-md bg-background/70 border-b border-border/60">
-      <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-        <a href="#top" className="font-serif text-xl tracking-tight">Rinkal<span className="text-accent">.</span></a>
-        <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-          <a href="#about" className="hover:text-foreground transition-colors">About</a>
-          <a href="#work" className="hover:text-foreground transition-colors">Work</a>
-          <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
-          <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
-        </nav>
-        <a href="#contact" className="text-sm font-medium px-4 py-2 rounded-full bg-foreground text-background hover:bg-accent transition-colors">
-          Say hello
-        </a>
+    <main className="w-full min-h-screen bg-background text-foreground flex flex-col items-center">
+      <div className="w-full max-w-2xl px-5 sm:px-6 py-16 sm:py-24 space-y-24 sm:space-y-32">
+        <Hero />
+        <Projects />
+        <Experience />
+        <Contact />
+        <footer className="pt-12 pb-8 text-center text-[10px] font-bold tracking-[0.2em] uppercase text-muted-foreground font-display">
+          © 2026 Rinkal Satani — Built with Indigo
+        </footer>
       </div>
-    </header>
+    </main>
   );
 }
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
-      <div className="mx-auto max-w-6xl px-6 pt-24 pb-32 md:pt-36 md:pb-44">
-        <p className="font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground mb-8">
-          Surat, India · Available for remote roles
-        </p>
-        <h1 className="font-serif text-[15vw] md:text-[10rem] leading-[0.9] tracking-tighter">
-          Rinkal
-          <br />
-          <span className="italic text-accent">Satani.</span>
-        </h1>
-        <div className="mt-12 grid md:grid-cols-3 gap-8 items-end">
-          <div className="md:col-span-2 max-w-2xl text-lg md:text-xl text-foreground/80 leading-relaxed">
-            Front-end developer with five years of experience crafting{" "}
-            <span className="italic font-serif text-foreground">scalable, accessible</span> web and mobile experiences in React, TypeScript and GraphQL — most recently in healthcare and AI.
-          </div>
-          <div className="flex flex-col gap-1 font-mono text-xs uppercase tracking-widest text-muted-foreground md:text-right">
-            <span>05 years</span>
-            <span>30+ components shipped</span>
-            <span>15+ engineers supported</span>
-          </div>
-        </div>
+    <section className="space-y-7 sm:space-y-8">
+      <div className="inline-flex items-center gap-2 px-3 py-1 text-[10px] sm:text-xs font-medium tracking-wider uppercase border border-border rounded-full text-accent bg-surface font-display">
+        <span className="relative flex w-2 h-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        Available for remote roles
       </div>
-    </section>
-  );
-}
-
-function About() {
-  return (
-    <section id="about" className="border-t border-border">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32 grid md:grid-cols-12 gap-12">
-        <div className="md:col-span-4">
-          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">01 — About</p>
-          <h2 className="mt-4 text-4xl md:text-5xl">A short bio.</h2>
-        </div>
-        <div className="md:col-span-8 space-y-6 text-lg leading-relaxed text-foreground/80">
-          <p>
-            I design and build front-end systems that make complex products feel effortless. My focus is reusable component architecture, performance, and accessibility — the unglamorous work that compounds.
-          </p>
-          <p>
-            At <span className="font-serif italic text-foreground">Frontera</span>, I shipped a TypeScript component library used across a 15-engineer team, optimized GraphQL pipelines, and reduced initial load times by ~40%. At <span className="font-serif italic text-foreground">CogniAble</span>, I built cross-platform React Native apps for an AI-driven behavioral therapy platform.
-          </p>
-          <p>
-            I care about WCAG compliance, 85%+ test coverage, and quiet collaboration in distributed Agile teams.
-          </p>
-        </div>
+      <h1 className="font-display text-5xl sm:text-7xl font-bold tracking-tight text-white leading-[0.95]">
+        Rinkal <br /> Satani.
+      </h1>
+      <p className="text-lg sm:text-xl text-muted-ink leading-relaxed max-w-lg">
+        Front-end developer with 5 years crafting scalable, accessible web and mobile experiences in React, TypeScript and GraphQL — most recently in healthcare and AI.
+      </p>
+      <div className="flex flex-wrap gap-6 sm:gap-10 pt-2 text-sm">
+        <a href="mailto:rinkalkhatrani123@gmail.com" className="text-white hover:text-accent transition-colors underline-offset-4 hover:underline break-all">
+          rinkalkhatrani123@gmail.com
+        </a>
+        <a href="tel:+917284848463" className="text-muted-ink hover:text-accent transition-colors">
+          +91 72848 48463
+        </a>
       </div>
     </section>
   );
@@ -163,47 +102,39 @@ function About() {
 
 function Projects() {
   return (
-    <section id="work" className="border-t border-border bg-secondary/40">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
-        <div className="flex items-end justify-between mb-16">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">02 — Selected work</p>
-            <h2 className="mt-4 text-4xl md:text-5xl">Things I've built.</h2>
-          </div>
-        </div>
-        <div className="grid gap-6">
-          {projects.map((p, i) => (
-            <article
-              key={p.title}
-              className="group relative bg-card border border-border rounded-2xl p-8 md:p-10 hover:border-accent transition-colors"
-            >
-              <div className="grid md:grid-cols-12 gap-6">
-                <div className="md:col-span-1 font-mono text-xs text-muted-foreground pt-2">
-                  0{i + 1}
-                </div>
-                <div className="md:col-span-7">
-                  <h3 className="text-3xl md:text-4xl">{p.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground font-mono uppercase tracking-wider">
-                    {p.role} · {p.year}
-                  </p>
-                  <p className="mt-5 text-base md:text-lg text-foreground/80 leading-relaxed max-w-xl">
-                    {p.description}
-                  </p>
-                </div>
-                <div className="md:col-span-4 flex flex-wrap gap-2 md:justify-end md:content-start">
-                  {p.stack.map((s) => (
-                    <span
-                      key={s}
-                      className="text-xs font-mono px-3 py-1 rounded-full border border-border text-muted-foreground"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+    <section className="space-y-10 sm:space-y-12">
+      <h2 className="text-xs font-bold tracking-widest uppercase text-accent font-display">
+        Selected Projects
+      </h2>
+      <div className="space-y-5 sm:space-y-6">
+        {projects.map((p) => (
+          <article
+            key={p.title}
+            className="group p-6 sm:p-7 rounded-2xl bg-surface border border-border hover:border-accent hover:glow-soft transition-all duration-300"
+          >
+            <div className="flex justify-between items-start gap-4 mb-4">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white group-hover:text-accent transition-colors font-display">
+                {p.title}
+              </h3>
+              <span className="shrink-0 text-xs text-muted-ink px-2 py-1 rounded bg-background border border-border font-display">
+                {p.year}
+              </span>
+            </div>
+            <p className="text-muted-ink mb-6 text-sm sm:text-base leading-relaxed">
+              {p.description}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {p.stack.map((s) => (
+                <span
+                  key={s}
+                  className="text-[10px] font-bold tracking-wider uppercase px-2 py-1 border border-border rounded text-muted-foreground"
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
@@ -211,60 +142,36 @@ function Projects() {
 
 function Experience() {
   return (
-    <section id="experience" className="border-t border-border">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32 grid md:grid-cols-12 gap-12">
-        <div className="md:col-span-4">
-          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">03 — Experience</p>
-          <h2 className="mt-4 text-4xl md:text-5xl">Where I've worked.</h2>
-        </div>
-        <div className="md:col-span-8 space-y-6">
-          {experience.map((e) => (
-            <article key={e.company} className="bg-card border border-border rounded-2xl p-8 hover:border-accent transition-colors">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h3 className="text-2xl md:text-3xl">
-                  {e.role} <span className="italic text-accent">@ {e.company}</span>
-                </h3>
-                <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                  {e.period}
-                </span>
-              </div>
-              <p className="mt-1 text-sm text-muted-foreground">{e.location}</p>
-              <ul className="mt-5 space-y-2 text-foreground/80">
-                {e.points.map((pt) => (
-                  <li key={pt} className="flex gap-3 leading-relaxed">
-                    <span className="text-accent mt-2 shrink-0">—</span>
-                    <span>{pt}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function SkillsSection() {
-  return (
-    <section className="border-t border-border bg-secondary/40">
-      <div className="mx-auto max-w-6xl px-6 py-20">
-        <p className="font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">Toolbox</p>
-        <div className="flex flex-wrap gap-x-6 gap-y-3 font-serif text-2xl md:text-3xl text-foreground/70">
-          {skills.map((s, i) => (
-            <span key={s}>
-              {s}
-              {i < skills.length - 1 && <span className="text-accent ml-6">·</span>}
-            </span>
-          ))}
-        </div>
+    <section className="space-y-10 sm:space-y-12">
+      <h2 className="text-xs font-bold tracking-widest uppercase text-accent font-display">
+        Experience
+      </h2>
+      <div className="space-y-8">
+        {experience.map((e) => (
+          <div key={e.company} className="relative pl-8 border-l border-border">
+            <div
+              className={`absolute w-2.5 h-2.5 rounded-full -left-[5.5px] top-2 ${
+                e.active ? "bg-accent glow-soft" : "bg-deep"
+              }`}
+            />
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-1">
+              <h4 className="font-bold text-white font-display text-base sm:text-lg">
+                {e.role}
+              </h4>
+              <span className="text-xs text-muted-foreground font-display">
+                {e.period}
+              </span>
+            </div>
+            <p className="text-xs sm:text-sm text-accent mb-2 font-display">{e.company}</p>
+            <p className="text-sm text-muted-ink leading-relaxed">{e.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
 }
 
 function Contact() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const onSubmit = (e: React.FormEvent) => {
@@ -273,90 +180,53 @@ function Contact() {
     const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`);
     const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`);
     window.location.href = `mailto:rinkalkhatrani123@gmail.com?subject=${subject}&body=${body}`;
-    setStatus("sent");
   };
 
+  const inputCls =
+    "w-full bg-surface border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent focus:glow-indigo transition-all placeholder:text-muted-foreground text-foreground";
+
   return (
-    <section id="contact" className="border-t border-border">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32 grid md:grid-cols-12 gap-12">
-        <div className="md:col-span-5">
-          <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">04 — Contact</p>
-          <h2 className="mt-4 text-5xl md:text-6xl leading-[0.95]">
-            Let's build
-            <br />
-            <span className="italic">something good.</span>
-          </h2>
-          <div className="mt-10 space-y-3 font-mono text-sm">
-            <a href="mailto:rinkalkhatrani123@gmail.com" className="block hover:text-accent transition-colors">
-              rinkalkhatrani123@gmail.com
-            </a>
-            <a href="tel:+917284848463" className="block hover:text-accent transition-colors">
-              +91 72848 48463
-            </a>
-            <p className="text-muted-foreground">Surat, 395006 · India</p>
-          </div>
+    <section className="space-y-10 sm:space-y-12">
+      <h2 className="text-xs font-bold tracking-widest uppercase text-accent font-display">
+        Contact
+      </h2>
+      <form onSubmit={onSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 gap-4">
+          <input
+            type="text"
+            required
+            maxLength={80}
+            placeholder="Name"
+            value={form.name}
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
+            className={inputCls}
+          />
+          <input
+            type="email"
+            required
+            maxLength={200}
+            placeholder="Email"
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            className={inputCls}
+          />
+          <textarea
+            rows={4}
+            required
+            maxLength={1000}
+            placeholder="Your message"
+            value={form.message}
+            onChange={(e) => setForm({ ...form, message: e.target.value })}
+            className={inputCls + " resize-none"}
+          />
         </div>
-        <form onSubmit={onSubmit} className="md:col-span-7 space-y-6">
-          <Field label="Your name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} maxLength={80} />
-          <Field label="Email" type="email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} maxLength={200} />
-          <Field label="Message" textarea value={form.message} onChange={(v) => setForm({ ...form, message: v })} maxLength={1000} />
-          <button
-            type="submit"
-            className="group inline-flex items-center gap-3 px-7 py-4 rounded-full bg-foreground text-background hover:bg-accent transition-colors font-medium"
-          >
-            {status === "sent" ? "Opening mail…" : "Send message"}
-            <span className="transition-transform group-hover:translate-x-1">→</span>
-          </button>
-        </form>
-      </div>
+        <button
+          type="submit"
+          className="w-full bg-accent hover:bg-[#4338ca] text-white font-bold py-4 rounded-xl transition-all glow-indigo active:scale-[0.98] font-display"
+        >
+          Send Message
+        </button>
+      </form>
     </section>
-  );
-}
-
-function Field({
-  label, value, onChange, type = "text", textarea, maxLength,
-}: {
-  label: string;
-  value: string;
-  onChange: (v: string) => void;
-  type?: string;
-  textarea?: boolean;
-  maxLength?: number;
-}) {
-  const base = "w-full bg-transparent border-b border-border focus:border-accent outline-none py-3 text-lg transition-colors placeholder:text-muted-foreground/60";
-  return (
-    <label className="block">
-      <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">{label}</span>
-      {textarea ? (
-        <textarea
-          required
-          rows={4}
-          maxLength={maxLength}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          className={base + " resize-none"}
-        />
-      ) : (
-        <input
-          required
-          type={type}
-          maxLength={maxLength}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          className={base}
-        />
-      )}
-    </label>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-border">
-      <div className="mx-auto max-w-6xl px-6 py-10 flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground">
-        <p className="font-mono text-xs uppercase tracking-widest">© 2026 · Rinkal Satani</p>
-        <p className="font-serif italic">Designed & coded with care.</p>
-      </div>
-    </footer>
   );
 }
