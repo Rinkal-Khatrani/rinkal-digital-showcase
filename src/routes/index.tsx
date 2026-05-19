@@ -104,7 +104,7 @@ function Nav() {
           Rinkal Satani<span className="text-accent">.</span>
         </a>
         <nav className="hidden sm:flex items-center gap-6 text-sm text-muted-ink font-medium">
-          <a href="#work" className="hover:text-foreground transition-colors">Work</a>
+          
           <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
           <a href="#education" className="hover:text-foreground transition-colors">Education</a>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
