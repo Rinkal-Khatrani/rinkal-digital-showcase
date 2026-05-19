@@ -39,24 +39,37 @@ const experience = [
     role: "Front-end Developer",
     company: "Frontera, Denver USA (Remote)",
     period: "Nov 2023 — Apr 2026",
-    description:
-      "Built 30+ reusable React + TypeScript components for a 15-engineer team. Optimized GraphQL with CodeGen and pagination. Supported Django & Temporal back-end workflows in a HIPAA-compliant setup.",
+    points: [
+      "Built a centralized library of 30+ reusable React + TypeScript components, standardizing UI and accelerating feature delivery by ~30% across a 15+ engineer team.",
+      "Optimized GraphQL integrations using CodeGen, query tuning and pagination, improving data efficiency and front-end responsiveness.",
+      "Boosted performance with code-splitting, lazy loading and deferred fetching, reducing initial load time by ~40% and improving user engagement.",
+      "Ensured high code quality with 85%+ test coverage using Jest and React Testing Library, strengthening reliability of critical modules.",
+      "Automated key user flows (onboarding, scheduling, reporting) with Cypress E2E testing, reducing regression bugs by ~50%.",
+      "Delivered responsive, WCAG-compliant UI from Figma using Tailwind CSS, enhancing accessibility and user experience.",
+      "Supported back-end workflow using Django & Temporal in a HIPAA-compliant setup, while driving CI/CD, code reviews and cross-team collaboration.",
+    ],
     active: true,
   },
   {
     role: "Front-end Developer",
     company: "CogniAble, Gurgaon (Remote)",
     period: "May 2021 — Oct 2023",
-    description:
-      "Shipped cross-platform iOS & Android apps with React Native. Built responsive, WCAG-compliant UI from Figma. Introduced Jest unit testing and analytics tracking.",
+    points: [
+      "Built and enhanced cross-platform iOS & Android applications using React Native, delivering seamless, accessible (WCAG-compliant) user experiences for an AI-driven behavioral therapy platform.",
+      "Developed responsive, reusable UI components from Figma using Tailwind CSS, while modernizing legacy components to improve performance and maintainability.",
+      "Integrated REST/GraphQL and third-party APIs, enabling real-time data sync, analytics and expanded platform functionality.",
+      "Strengthened code quality by introducing Jest-based unit testing, implemented analytics tracking, and collaborated in remote Agile teams to drive efficient delivery.",
+    ],
     active: false,
   },
   {
     role: "Web Design Intern",
     company: "Fynzo (Remote)",
     period: "Nov 2020 — Feb 2021",
-    description:
-      "Built responsive user-friendly interfaces with HTML, CSS, JS and jQuery. Developed adaptive layouts following modern front-end best practices.",
+    points: [
+      "Completed a 3-month internship focused on responsive web design, building user-friendly interfaces with HTML, CSS, JavaScript and jQuery.",
+      "Developed adaptive layouts and enhanced front-end functionality while following modern web design best practices.",
+    ],
     active: false,
   },
 ];
