@@ -53,7 +53,7 @@ const experience = [
   },
   {
     role: "Web Design Intern",
-    company: "Remote",
+    company: "Fynzo (Remote)",
     period: "Nov 2020 — Feb 2021",
     description:
       "Built responsive user-friendly interfaces with HTML, CSS, JS and jQuery. Developed adaptive layouts following modern front-end best practices.",
