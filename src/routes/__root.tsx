@@ -79,6 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Front-end developer with 5+ years building scalable web and mobile apps with React, TypeScript and GraphQL." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Rinkal Satani — Front-end Developer" },
+      { name: "twitter:description", content: "Front-end developer with 5+ years building scalable web and mobile apps with React, TypeScript and GraphQL." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/5b4ad16b-9b39-4c01-a334-9d6d18514a63" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/5b4ad16b-9b39-4c01-a334-9d6d18514a63" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
