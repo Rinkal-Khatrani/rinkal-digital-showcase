@@ -73,10 +73,48 @@ const education = [
 ];
 
 const skills = [
-  "React.js", "TypeScript", "GraphQL", "React Native", "Redux",
+  "React.js", "TypeScript", "GraphQL", "React Native", "Redux / Thunk",
   "Tailwind CSS", "Material UI", "Jest", "React Testing Library",
-  "Cypress", "Django", "Temporal", "Node / Express", "MongoDB", "MySQL",
+  "Cypress", "Python", "Django", "Temporal", "Axios", "Express.js", "GitHub",
 ];
+
+const competencies = [
+  "Scalable Component Architecture",
+  "API Query Optimization",
+  "Cross-Platform UI Development",
+  "Accessibility (WCAG) Compliance",
+  "Agile Software Development",
+  "Automated Testing",
+  "Healthcare Data Security",
+  "User Experience Design",
+  "Remote Team Collaboration",
+];
+
+const softSkills = [
+  "Clear Communication",
+  "Mentorship",
+  "Problem Solving",
+  "Ownership & Accountability",
+  "Cross-functional Collaboration",
+  "Adaptability",
+  "Time Management",
+  "Attention to Detail",
+];
+
+const languages = ["English", "Hindi", "Gujarati"];
+
+const certifications = ["Certification in Kotlin for Android"];
+
+const profileSummary = [
+  "Rich experience building scalable web and mobile applications across Healthcare and AI domains with React.js, TypeScript and GraphQL.",
+  "Designed reusable component libraries adopted by 15+ engineers, improving development speed, consistency and maintainability.",
+  "Strong focus on performance and UX — achieved up to 40% faster load times via code-splitting, lazy loading and optimized API strategies.",
+  "Hands-on with REST/GraphQL integration and back-end workflows using Python, Django and Temporal in HIPAA-compliant environments.",
+  "Expert in modern testing practices (Jest, RTL, Cypress) — sustaining 85%+ coverage and reducing regression defects.",
+  "Collaborative remote-Agile professional with strong communication, mentoring and accessibility-first product mindset.",
+];
+
+
 
 function Index() {
   return (
@@ -85,14 +123,18 @@ function Index() {
       <div className="w-full max-w-3xl px-5 sm:px-6 py-12 sm:py-16 space-y-20 sm:space-y-28">
         <Hero />
         <About />
-        
+        <ProfileSummary />
         <Experience />
         <Education />
         <SkillsSection />
+        <Competencies />
+        <SoftSkills />
+        <CertificationsLanguages />
         <Contact />
         <Footer />
       </div>
     </main>
+
   );
 }
 
@@ -104,9 +146,10 @@ function Nav() {
           Rinkal Satani<span className="text-accent">.</span>
         </a>
         <nav className="hidden sm:flex items-center gap-6 text-sm text-muted-ink font-medium">
-          
+          <a href="#summary" className="hover:text-foreground transition-colors">Summary</a>
           <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
           <a href="#education" className="hover:text-foreground transition-colors">Education</a>
+          <a href="#skills" className="hover:text-foreground transition-colors">Skills</a>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
         </nav>
         <a
@@ -254,7 +297,7 @@ function Education() {
 
 function SkillsSection() {
   return (
-    <section className="space-y-6">
+    <section id="skills" className="space-y-6">
       <SectionHeader eyebrow="Toolbox" title="Technical skills." />
       <div className="flex flex-wrap gap-2">
         {skills.map((s) => (
@@ -269,6 +312,93 @@ function SkillsSection() {
     </section>
   );
 }
+
+function ProfileSummary() {
+  return (
+    <section id="summary" className="space-y-6">
+      <SectionHeader eyebrow="Profile" title="Summary." />
+      <ul className="space-y-3">
+        {profileSummary.map((p) => (
+          <li key={p} className="flex gap-2.5 text-sm sm:text-base text-muted-ink leading-relaxed">
+            <span className="text-accent mt-1.5 shrink-0">▸</span>
+            <span>{p}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function Competencies() {
+  return (
+    <section className="space-y-6">
+      <SectionHeader eyebrow="Core competencies" title="What I bring to a team." />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {competencies.map((c) => (
+          <div
+            key={c}
+            className="flex items-center gap-3 p-3 rounded-xl bg-surface border border-border shadow-card hover:border-accent transition-colors"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+            <span className="text-sm font-semibold text-foreground">{c}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function SoftSkills() {
+  return (
+    <section className="space-y-6">
+      <SectionHeader eyebrow="Soft skills" title="How I work." />
+      <div className="flex flex-wrap gap-2">
+        {softSkills.map((s) => (
+          <span
+            key={s}
+            className="text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
+          >
+            {s}
+          </span>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CertificationsLanguages() {
+  return (
+    <section className="grid sm:grid-cols-2 gap-6">
+      <div className="space-y-4">
+        <SectionHeader eyebrow="Certifications" title="Credentials." />
+        <ul className="space-y-2">
+          {certifications.map((c) => (
+            <li
+              key={c}
+              className="p-4 rounded-xl bg-surface border border-border shadow-card text-sm font-semibold text-foreground"
+            >
+              {c}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="space-y-4">
+        <SectionHeader eyebrow="Languages" title="I speak." />
+        <div className="flex flex-wrap gap-2">
+          {languages.map((l) => (
+            <span
+              key={l}
+              className="text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full bg-surface border border-border text-foreground"
+            >
+              {l}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
