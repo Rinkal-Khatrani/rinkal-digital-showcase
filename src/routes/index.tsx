@@ -297,7 +297,7 @@ function Education() {
 
 function SkillsSection() {
   return (
-    <section className="space-y-6">
+    <section id="skills" className="space-y-6">
       <SectionHeader eyebrow="Toolbox" title="Technical skills." />
       <div className="flex flex-wrap gap-2">
         {skills.map((s) => (
@@ -312,6 +312,93 @@ function SkillsSection() {
     </section>
   );
 }
+
+function ProfileSummary() {
+  return (
+    <section id="summary" className="space-y-6">
+      <SectionHeader eyebrow="Profile" title="Summary." />
+      <ul className="space-y-3">
+        {profileSummary.map((p) => (
+          <li key={p} className="flex gap-2.5 text-sm sm:text-base text-muted-ink leading-relaxed">
+            <span className="text-accent mt-1.5 shrink-0">▸</span>
+            <span>{p}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function Competencies() {
+  return (
+    <section className="space-y-6">
+      <SectionHeader eyebrow="Core competencies" title="What I bring to a team." />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {competencies.map((c) => (
+          <div
+            key={c}
+            className="flex items-center gap-3 p-3 rounded-xl bg-surface border border-border shadow-card hover:border-accent transition-colors"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+            <span className="text-sm font-semibold text-foreground">{c}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function SoftSkills() {
+  return (
+    <section className="space-y-6">
+      <SectionHeader eyebrow="Soft skills" title="How I work." />
+      <div className="flex flex-wrap gap-2">
+        {softSkills.map((s) => (
+          <span
+            key={s}
+            className="text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
+          >
+            {s}
+          </span>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CertificationsLanguages() {
+  return (
+    <section className="grid sm:grid-cols-2 gap-6">
+      <div className="space-y-4">
+        <SectionHeader eyebrow="Certifications" title="Credentials." />
+        <ul className="space-y-2">
+          {certifications.map((c) => (
+            <li
+              key={c}
+              className="p-4 rounded-xl bg-surface border border-border shadow-card text-sm font-semibold text-foreground"
+            >
+              {c}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="space-y-4">
+        <SectionHeader eyebrow="Languages" title="I speak." />
+        <div className="flex flex-wrap gap-2">
+          {languages.map((l) => (
+            <span
+              key={l}
+              className="text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full bg-surface border border-border text-foreground"
+            >
+              {l}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
