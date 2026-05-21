@@ -7,8 +7,7 @@ export const Route = createFileRoute("/")({
 
 const LINKEDIN = "https://www.linkedin.com/in/rinkal-khatrani/";
 const GITHUB = "https://github.com/Rinkal-Khatrani";
-const EMAIL = "rinkalkhatrani123@gmail.com";
-const PHONE = "+91 72848 48463";
+const EMAIL = "rinkalkhatrani3366@gmail.com";
 
 
 const experience = [
@@ -421,9 +420,6 @@ function Contact() {
         <div className="sm:col-span-2 space-y-3 text-sm">
           <a href={`mailto:${EMAIL}`} className="flex items-center gap-2 text-foreground hover:text-accent transition-colors break-all">
             <MailIcon /> {EMAIL}
-          </a>
-          <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="flex items-center gap-2 text-muted-ink hover:text-accent transition-colors">
-            <PhoneIcon /> {PHONE}
           </a>
           <a href={LINKEDIN} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-muted-ink hover:text-accent transition-colors">
             <LinkedInIcon /> linkedin.com/in/rinkal-khatrani
