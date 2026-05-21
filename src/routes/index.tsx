@@ -73,10 +73,48 @@ const education = [
 ];
 
 const skills = [
-  "React.js", "TypeScript", "GraphQL", "React Native", "Redux",
+  "React.js", "TypeScript", "GraphQL", "React Native", "Redux / Thunk",
   "Tailwind CSS", "Material UI", "Jest", "React Testing Library",
-  "Cypress", "Django", "Temporal", "Node / Express", "MongoDB", "MySQL",
+  "Cypress", "Python", "Django", "Temporal", "Axios", "Express.js", "GitHub",
 ];
+
+const competencies = [
+  "Scalable Component Architecture",
+  "API Query Optimization",
+  "Cross-Platform UI Development",
+  "Accessibility (WCAG) Compliance",
+  "Agile Software Development",
+  "Automated Testing",
+  "Healthcare Data Security",
+  "User Experience Design",
+  "Remote Team Collaboration",
+];
+
+const softSkills = [
+  "Clear Communication",
+  "Mentorship",
+  "Problem Solving",
+  "Ownership & Accountability",
+  "Cross-functional Collaboration",
+  "Adaptability",
+  "Time Management",
+  "Attention to Detail",
+];
+
+const languages = ["English", "Hindi", "Gujarati"];
+
+const certifications = ["Certification in Kotlin for Android"];
+
+const profileSummary = [
+  "Rich experience building scalable web and mobile applications across Healthcare and AI domains with React.js, TypeScript and GraphQL.",
+  "Designed reusable component libraries adopted by 15+ engineers, improving development speed, consistency and maintainability.",
+  "Strong focus on performance and UX — achieved up to 40% faster load times via code-splitting, lazy loading and optimized API strategies.",
+  "Hands-on with REST/GraphQL integration and back-end workflows using Python, Django and Temporal in HIPAA-compliant environments.",
+  "Expert in modern testing practices (Jest, RTL, Cypress) — sustaining 85%+ coverage and reducing regression defects.",
+  "Collaborative remote-Agile professional with strong communication, mentoring and accessibility-first product mindset.",
+];
+
+
 
 function Index() {
   return (
@@ -85,14 +123,18 @@ function Index() {
       <div className="w-full max-w-3xl px-5 sm:px-6 py-12 sm:py-16 space-y-20 sm:space-y-28">
         <Hero />
         <About />
-        
+        <ProfileSummary />
         <Experience />
         <Education />
         <SkillsSection />
+        <Competencies />
+        <SoftSkills />
+        <CertificationsLanguages />
         <Contact />
         <Footer />
       </div>
     </main>
+
   );
 }
 
@@ -104,9 +146,10 @@ function Nav() {
           Rinkal Satani<span className="text-accent">.</span>
         </a>
         <nav className="hidden sm:flex items-center gap-6 text-sm text-muted-ink font-medium">
-          
+          <a href="#summary" className="hover:text-foreground transition-colors">Summary</a>
           <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
           <a href="#education" className="hover:text-foreground transition-colors">Education</a>
+          <a href="#skills" className="hover:text-foreground transition-colors">Skills</a>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
         </nav>
         <a
